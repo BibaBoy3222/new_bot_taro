@@ -744,6 +744,7 @@ async def admin_take_request(callback: CallbackQuery, bot: Bot):
     kb.button(text="✅ Завершить заявку", callback_data=f"admin_finish_{req_id}")
     kb.adjust(1)
 
+
     await callback.message.answer(
         f"Вы взяли заявку #{req_id} в работу ✅",
         reply_markup=kb.as_markup()
